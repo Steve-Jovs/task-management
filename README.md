@@ -7,22 +7,33 @@ Features a robust CLI interface, user authentication, and comprehensive task man
 
 ## ✨ Features
 
-- 🔐 **Multi-User Authentication** – Secure user registration and login system  
-- ✅ **Task Management** – Add, update, delete, and complete tasks  
-- 🔍 **Smart Filtering** – Filter tasks by status, priority, due date  
-- 📊 **Statistics** – Visual task statistics and progress tracking  
-- 🔒 **Security First** – Password hashing, user isolation, secure configuration  
-- 💾 **MySQL Persistence** – Reliable data storage with raw SQL queries  
-- 🎯 **OOP Design** – Clean, maintainable object-oriented architecture  
+- 🔐 **Multi-User Authentication** – Secure user registration and login system
+  
+- ✅ **Task Management** – Add, update, delete, and complete tasks
+  
+- 🔍 **Smart Filtering** – Filter tasks by status, priority, due date
+  
+- 📊 **Statistics** – Visual task statistics and progress tracking
+  
+- 🔒 **Security First** – Password hashing, user isolation, secure configuration
+  
+- 💾 **MySQL Persistence** – Reliable data storage with raw SQL queries
+  
+- 🎯 **OOP Design** – Clean, maintainable object-oriented architecture
+  
 - ⚡ **Custom Algorithms** – Efficient sorting and filtering implementations  
 
 ---
 
 ## 🛠 Technology Stack
-- **Backend:** Python 3.8+  
-- **Database:** MySQL  
-- **Authentication:** Custom secure authentication system  
-- **CLI Framework:** Python `cmd` module  
+- **Backend:** Python 3.8+
+  
+- **Database:** MySQL
+  
+- **Authentication:** Custom secure authentication system
+  
+- **CLI Framework:** Python `cmd` module
+  
 - **Security:** SHA-256 password hashing  
 
 ---
@@ -128,48 +139,48 @@ You'll see the authentication menu:
 Choose option (1-3):
 ```
 ## Default Admin Account
-- Username: admin
+- Username: `admin`
 
-- Password: admin123 (change this immediately after first login)
+- Password: `admin123` (change this immediately after first login)
 
-Available Commands
+## Available Commands
 Authentication Commands
-whoami - Show current user information
+- `whoami` - Show current user information
 
-logout - Log out current user
+- `logout` - Log out current user
 
-users - List all users (admin only)
+- `users` - List all users (admin only)
 
 Task Management Commands
-add - Add a new task
+- `add` - Add a new task
 
-list - List all tasks
+- `list` - List all tasks
 
-list status=Completed - Filter tasks by status
+- `list status=Completed` - Filter tasks by status
 
-list priority=High - Filter tasks by priority
+- `list priority=High` - Filter tasks by priority
 
-update [task_id] - Update a task's details
+- `update [task_id]` - Update a task's details
 
-complete [task_id] - Mark a task as completed
+- `complete [task_id]` - Mark a task as completed
 
-delete [task_id] - Delete a task
+- `delete [task_id]` - Delete a task
 
-search [keyword] - Search tasks by keyword
+- `search [keyword]` - Search tasks by keyword
 
 Utility Commands
-menu - Show main menu
+- `menu` - Show main menu
 
-stats - Show task statistics
+- `stats` - Show task statistics
 
-clear - Clear the screen
+- `clear` - Clear the screen
 
-help - Show command help
+- `help` - Show command help
 
-exit - Exit the application
+- `exit` - Exit the application
 
-Examples
-bash
+# Examples
+```bash
 # Add a new task
 task_manager> add
 Title: Complete project proposal
@@ -188,8 +199,10 @@ task_manager> search meeting
 
 # Show statistics
 task_manager> stats
-Project Structure
-text
+```
+
+# Project Structure
+```text
 task-manager/
 ├── src/                 # Source code
 │   ├── __init__.py     # Package initialization
@@ -208,7 +221,9 @@ task-manager/
 ├── requirements.txt    # Python dependencies
 ├── setup.py           # Package installation script
 └── README.md          # This file
-Database Schema
+```
+
+# Database Schema
 Users Table
 sql
 CREATE TABLE users (
