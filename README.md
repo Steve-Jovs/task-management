@@ -223,9 +223,9 @@ task-manager/
 └── README.md          # This file
 ```
 
-# Database Schema
-Users Table
-sql
+## Database Schema
+# Users Table
+```sql
 CREATE TABLE users (
     user_id INT AUTO_INCREMENT PRIMARY KEY,
     username VARCHAR(50) UNIQUE NOT NULL,
@@ -233,8 +233,9 @@ CREATE TABLE users (
     email VARCHAR(100),
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
-Tasks Table
-sql
+```
+# Tasks Table
+```sql
 CREATE TABLE tasks (
     task_id INT AUTO_INCREMENT PRIMARY KEY,
     user_id INT NOT NULL,
@@ -249,80 +250,88 @@ CREATE TABLE tasks (
     INDEX idx_user_status (user_id, status),
     INDEX idx_user_priority (user_id, priority_level)
 );
-Technical Features
-Security Implementation
-Password Hashing: SHA-256 with salt
+```
 
-User Isolation: Users can only access their own tasks
+## Technical Features
+# Security Implementation
+- Password Hashing: SHA-256 with salt
 
-Input Validation: Comprehensive validation and sanitization
+- User Isolation: Users can only access their own tasks
 
-SQL Injection Protection: Parameterized queries
+- Input Validation: Comprehensive validation and sanitization
 
-Secure Configuration: Environment-based secrets management
+- SQL Injection Protection: Parameterized queries
 
-Performance Optimizations
-Efficient Sorting: Custom merge sort algorithm implementation
+- Secure Configuration: Environment-based secrets management
 
-Database Indexing: Optimized indexes for common queries
+# Performance Optimizations
+- Efficient Sorting: Custom merge sort algorithm implementation
 
-Memory Management: Intelligent caching with database synchronization
+- Database Indexing: Optimized indexes for common queries
 
-Thread Safety: Locking mechanisms for concurrent operations
+- Memory Management: Intelligent caching with database synchronization
 
-Error Handling
-Graceful Degradation: Fallback mechanisms for database failures
+- Thread Safety: Locking mechanisms for concurrent operations
 
-User-Friendly Messages: Clear, actionable error messages
+# Error Handling
+- Graceful Degradation: Fallback mechanisms for database failures
 
-Comprehensive Logging: Detailed logging for debugging
+- User-Friendly Messages: Clear, actionable error messages
 
-Input Validation: Protection against invalid user input
+- Comprehensive Logging: Detailed logging for debugging
 
-Development
-Setting Up Development Environment
-Fork and clone the repository
+- Input Validation: Protection against invalid user input
 
-bash
+## Development
+# Setting Up Development Environment
+1. Fork and clone the repository
+
+```bash
 git clone https://github.com/yourusername/task-manager.git
 cd task-manager
-Set up development environment
+```
 
-bash
+2. Set up development environment
+
+```bash
 python -m venv venv
 source venv/bin/activate  # or venv\Scripts\activate on Windows
 pip install -r requirements.txt
 pip install -r requirements-dev.txt  # for development tools
-Run tests
+```
 
-bash
+3. Run tests
+
+```bash
 python -m pytest tests/
 python -m unittest discover tests/
-Code Style
+```
+
+# Code Style
 This project follows Python PEP 8 style guide:
 
-Use 4 spaces for indentation
+- Use 4 spaces for indentation
 
-Maximum line length of 88 characters
+- Maximum line length of 88 characters
 
-Comprehensive docstrings for all functions and classes
+- Comprehensive docstrings for all functions and classes
 
-Type hints for better code clarity
+- Type hints for better code clarity
 
-Adding New Features
-Create a feature branch
+# Adding New Features
+1. Create a feature branch
 
-Implement your changes with tests
+2. Implement your changes with tests
 
-Ensure all tests pass
+3. Ensure all tests pass
 
-Submit a pull request
+4. Submit a pull request
 
-Troubleshooting
-Common Issues
+## Troubleshooting
+# Common Issues
 Database Connection Failed
 
-bash
+```bash
 # Check MySQL service is running
 sudo service mysql start  # Linux/macOS
 # or
@@ -330,34 +339,40 @@ net start mysql          # Windows
 
 # Verify credentials in .env file
 cat .env
-Module Not Found Errors
+```
 
-bash
+# Module Not Found Errors
+
+```bash
 # Reinstall dependencies
 pip install -r requirements.txt
 
 # Check Python path
 python -c "import sys; print(sys.path)"
+```
+
 Permission Denied Errors
 
-bash
+```bash
 # Set proper file permissions
 chmod 600 .env
 chmod +x *.py
-Getting Help
-Check the troubleshooting section above
+```
 
-Review the application logs for error details
+# Getting Help
+1. Check the troubleshooting section above
 
-Check if your database is running and accessible
+2. Review the application logs for error details
 
-Verify your .env configuration matches your database setup
+3. Check if your database is running and accessible
 
-API Documentation
+4. Verify your .env configuration matches your database setup
+
+## API Documentation
 While this is primarily a CLI application, the core classes can be used as a Python API:
 
-Basic Usage Example
-python
+# Basic Usage Example
+```python
 from src.database import DatabaseConnection
 from src.auth import AuthenticationManager
 from src.task_manager import TaskManager
@@ -371,39 +386,17 @@ task_manager = TaskManager(db, auth)
 if auth.login('username', 'password'):
     tasks = task_manager.list_tasks()
     statistics = task_manager.get_statistics()
-Contributing
-We welcome contributions! Please see our Contributing Guidelines for details.
-
-Fork the repository
-
-Create a feature branch (git checkout -b feature/amazing-feature)
-
-Commit your changes (git commit -m 'Add some amazing feature')
-
-Push to the branch (git push origin feature/amazing-feature)
-
-Open a Pull Request
-
-License
-This project is licensed under the MIT License - see the LICENSE file for details.
+```
 
 Acknowledgments
-Built with pure Python and MySQL (no ORM)
+- Built with pure Python and MySQL (no ORM)
 
-Custom algorithms for sorting and filtering
+- Custom algorithms for sorting and filtering
 
-Secure authentication implementation
+- Secure authentication implementation
 
-Comprehensive error handling and validation
+- Comprehensive error handling and validation
 
-Support
-If you encounter any issues or have questions:
-
-Check the Issues page
-
-Create a new issue with detailed information
-
-Include your environment details and error messages
 
 Note: This application is designed for educational purposes and demonstrates secure coding practices, proper architecture, and comprehensive feature implementation. Always follow security best practices when deploying to production environments.
 
