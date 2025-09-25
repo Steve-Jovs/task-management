@@ -1,43 +1,47 @@
 # Task Management Application
 
-A secure, multi-user command-line task management application built with Python and MySQL. Features a robust CLI interface, user authentication, and comprehensive task management capabilities.
+A secure, multi-user command-line task management application built with Python and MySQL.  
+Features a robust CLI interface, user authentication, and comprehensive task management capabilities.
 
-## Features
+---
 
-- 🔐 Multi-User Authentication - Secure user registration and login system
+## ✨ Features
 
-- ✅ Task Management - Add, update, delete, and complete tasks
+- 🔐 **Multi-User Authentication** – Secure user registration and login system  
+- ✅ **Task Management** – Add, update, delete, and complete tasks  
+- 🔍 **Smart Filtering** – Filter tasks by status, priority, due date  
+- 📊 **Statistics** – Visual task statistics and progress tracking  
+- 🔒 **Security First** – Password hashing, user isolation, secure configuration  
+- 💾 **MySQL Persistence** – Reliable data storage with raw SQL queries  
+- 🎯 **OOP Design** – Clean, maintainable object-oriented architecture  
+- ⚡ **Custom Algorithms** – Efficient sorting and filtering implementations  
 
-- 🔍 Smart Filtering - Filter tasks by status, priority, due date
+---
 
-- 📊 Statistics - Visual task statistics and progress tracking
+## 🛠 Technology Stack
+- **Backend:** Python 3.8+  
+- **Database:** MySQL  
+- **Authentication:** Custom secure authentication system  
+- **CLI Framework:** Python `cmd` module  
+- **Security:** SHA-256 password hashing  
 
-- 🔒 Security First - Password hashing, user isolation, secure configuration
+---
 
-- 💾 MySQL Persistence - Reliable data storage with raw SQL queries
+## 📋 Prerequisites
 
-- 🎯 OOP Design - Clean, maintainable object-oriented architecture
+- Python 3.8+  
+- MySQL Server 5.7 or higher  
+- Git  
 
-- ⚡ Custom Algorithms - Efficient sorting and filtering implementations
+---
 
-## Technology Stack
-- Backend: Python 3.8+
-- Database: MySQL
-- Authentication: Custom secure authentication system
-- CLI Framework: Python cmd module
-- Security: SHA-256 password hashing
+## 🚀 Quick Start
 
-## Prerequisites
+### Method 1: Automated Setup (Recommended)
 
-- Python 3.8+
-- MySQL Server 5.7 or higher
-- Git
+1. Clone and setup environment:
 
-## Quick Start
-Method 1: Automated Setup (Recommended)
-Clone and setup environment
-
-bash
+```bash
 git clone <repository-url>
 cd task-manager
 python -m venv venv
@@ -48,61 +52,73 @@ venv\Scripts\activate
 source venv/bin/activate
 
 pip install -r requirements.txt
-Run secure setup wizard
+```
 
-bash
+2. Run secure setup wizard
+
+```bash
 python setup_new_user.py
-Start the application
+```
 
-bash
+3. Start the application
+
+```bash
 python -m src.cli
-Method 2: Manual Setup
-Configure environment variables
-
+```
+### Method 2: Manual Setup
+1. Configure environment variables
+```
 bash
 cp .env.example .env
 # Edit .env with your database credentials
-Install dependencies
+```
 
-bash
+2. Install dependencies
+
+```bash
 pip install -r requirements.txt
-Initialize database
+```
+3. Initialize database
 
-bash
+```bash
 python setup_database.py
-Run the application
+```
+4. Run the application
 
-bash
+```bash
 python -m src.cli
-Security Setup
+```
+## Security Setup
 This application uses environment variables for secure configuration. No passwords are stored in the code.
 
 First-Time Security Configuration:
-bash
+```bash
 # Run the interactive setup script
 python setup_new_user.py
 
 # Or manually create .env file from example
 cp .env.example .env
 # Edit .env with your actual database credentials
-Important Security Notes:
-The .env file is automatically ignored by Git
+```
+## Important Security Notes:
+- The .env file is automatically ignored by Git
 
-Database passwords are never stored in source code
+- Database passwords are never stored in source code
 
-Passwords are hashed using SHA-256
+- Passwords are hashed using SHA-256
 
-Users can only access their own tasks
+- Users can only access their own tasks
 
-Use different passwords for development and production
+- Use different passwords for development and production
 
-Application Usage
-Starting the Application
-bash
+### Application Usage
+## Starting the Application
+```bash
 python -m src.cli
+```
 You'll see the authentication menu:
 
-text
+```text
 🔐 Task Manager - Authentication Required
 ==================================================
 1. Login
@@ -110,10 +126,11 @@ text
 3. Exit
 
 Choose option (1-3):
-Default Admin Account
-Username: admin
+```
+## Default Admin Account
+- Username: admin
 
-Password: admin123 (change this immediately after first login)
+- Password: admin123 (change this immediately after first login)
 
 Available Commands
 Authentication Commands
