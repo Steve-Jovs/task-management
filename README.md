@@ -226,7 +226,7 @@ CREATE TABLE users (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 ```
-## Tasks Table
+### Tasks Table
 ```sql
 CREATE TABLE tasks (
     task_id INT AUTO_INCREMENT PRIMARY KEY,
@@ -363,7 +363,7 @@ chmod +x *.py
 ## API Documentation
 While this is primarily a CLI application, the core classes can be used as a Python API:
 
-# Basic Usage Example
+## Basic Usage Example
 ```python
 from src.database import DatabaseConnection
 from src.auth import AuthenticationManager
