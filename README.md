@@ -3,8 +3,6 @@
 A secure, multi-user command-line task management application built with Python and MySQL.  
 Features a robust CLI interface, user authentication, and comprehensive task management capabilities.
 
----
-
 ## ✨ Features
 
 - 🔐 **Multi-User Authentication** – Secure user registration and login system
@@ -23,8 +21,6 @@ Features a robust CLI interface, user authentication, and comprehensive task man
   
 - ⚡ **Custom Algorithms** – Efficient sorting and filtering implementations  
 
----
-
 ## 🛠 Technology Stack
 - **Backend:** Python 3.8+
   
@@ -36,15 +32,11 @@ Features a robust CLI interface, user authentication, and comprehensive task man
   
 - **Security:** SHA-256 password hashing  
 
----
-
 ## 📋 Prerequisites
 
 - Python 3.8+  
 - MySQL Server 5.7 or higher  
 - Git  
-
----
 
 ## 🚀 Quick Start
 
@@ -179,7 +171,7 @@ Utility Commands
 
 - `exit` - Exit the application
 
-# Examples
+## Examples
 ```bash
 # Add a new task
 task_manager> add
@@ -201,7 +193,7 @@ task_manager> search meeting
 task_manager> stats
 ```
 
-# Project Structure
+## Project Structure
 ```text
 task-manager/
 ├── src/                 # Source code
@@ -224,7 +216,7 @@ task-manager/
 ```
 
 ## Database Schema
-# Users Table
+### Users Table
 ```sql
 CREATE TABLE users (
     user_id INT AUTO_INCREMENT PRIMARY KEY,
@@ -234,7 +226,7 @@ CREATE TABLE users (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 ```
-# Tasks Table
+## Tasks Table
 ```sql
 CREATE TABLE tasks (
     task_id INT AUTO_INCREMENT PRIMARY KEY,
@@ -253,7 +245,7 @@ CREATE TABLE tasks (
 ```
 
 ## Technical Features
-# Security Implementation
+### Security Implementation
 - Password Hashing: SHA-256 with salt
 
 - User Isolation: Users can only access their own tasks
@@ -264,7 +256,7 @@ CREATE TABLE tasks (
 
 - Secure Configuration: Environment-based secrets management
 
-# Performance Optimizations
+### Performance Optimizations
 - Efficient Sorting: Custom merge sort algorithm implementation
 
 - Database Indexing: Optimized indexes for common queries
@@ -273,7 +265,7 @@ CREATE TABLE tasks (
 
 - Thread Safety: Locking mechanisms for concurrent operations
 
-# Error Handling
+### Error Handling
 - Graceful Degradation: Fallback mechanisms for database failures
 
 - User-Friendly Messages: Clear, actionable error messages
@@ -283,7 +275,7 @@ CREATE TABLE tasks (
 - Input Validation: Protection against invalid user input
 
 ## Development
-# Setting Up Development Environment
+### Setting Up Development Environment
 1. Fork and clone the repository
 
 ```bash
@@ -307,7 +299,7 @@ python -m pytest tests/
 python -m unittest discover tests/
 ```
 
-# Code Style
+### Code Style
 This project follows Python PEP 8 style guide:
 
 - Use 4 spaces for indentation
@@ -318,7 +310,7 @@ This project follows Python PEP 8 style guide:
 
 - Type hints for better code clarity
 
-# Adding New Features
+### Adding New Features
 1. Create a feature branch
 
 2. Implement your changes with tests
@@ -328,7 +320,7 @@ This project follows Python PEP 8 style guide:
 4. Submit a pull request
 
 ## Troubleshooting
-# Common Issues
+### Common Issues
 Database Connection Failed
 
 ```bash
@@ -341,7 +333,7 @@ net start mysql          # Windows
 cat .env
 ```
 
-# Module Not Found Errors
+### Module Not Found Errors
 
 ```bash
 # Reinstall dependencies
@@ -359,7 +351,7 @@ chmod 600 .env
 chmod +x *.py
 ```
 
-# Getting Help
+### Getting Help
 1. Check the troubleshooting section above
 
 2. Review the application logs for error details
